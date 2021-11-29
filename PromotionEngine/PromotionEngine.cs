@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace PromotionEngine
 {
-    public class PromotionEngineInit : IHostedService
+    public class PromotionEngine : IHostedService
     {
         private readonly IFacadeService _facadeService;
 
-        public PromotionEngineInit(IFacadeService facadeService)
+        public PromotionEngine(IFacadeService facadeService)
         {
             _facadeService = facadeService;
         }

@@ -23,7 +23,7 @@ namespace PromotionEngine
                     services.AddTransient<ICalculateService, CalculateService>();
                     services.AddTransient<IFacadeService, FacadeService>();
                     services.AddDbContext<InMemoryDbContext>(options => options.UseInMemoryDatabase("TestDatabase"));
-                    services.AddHostedService<PromotionEngineInit>();
+                    services.AddHostedService<PromotionEngine>();
                 })
                 .UseConsoleLifetime(o => o.SuppressStatusMessages = true);
 

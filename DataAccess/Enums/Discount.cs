@@ -1,6 +1,6 @@
 ﻿namespace DataAccess.Enums
 {
-    public enum DiscountType
+    public enum Discount
     {
         Percentage,
         FixedPrice

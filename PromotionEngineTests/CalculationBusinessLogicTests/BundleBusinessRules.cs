@@ -11,7 +11,7 @@ using Xunit;
 
 namespace PromotionEngineTests.CalculationBusinessLogicTests
 {
-    public class BundleBusinessRulesShould
+    public class BundleBusinessRules
     {
         [Fact]
         public void NotHaveItemForProcessing()
@@ -24,9 +24,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 1, SKU = "C", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 };
+            var promotion = new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 };
 
-            var bundleBusinessRules = new BundleBusinessRules();
+            var bundleBusinessRules = new BusinessLogic.Service.BusinessRules.BundleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = bundleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -47,9 +47,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 2, SKU = "D", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 };
+            var promotion = new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 };
 
-            var bundleBusinessRules = new BundleBusinessRules();
+            var bundleBusinessRules = new BusinessLogic.Service.BusinessRules.BundleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = bundleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -70,9 +70,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 2, SKU = "D", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 };
+            var promotion = new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 };
 
-            var bundleBusinessRules = new BundleBusinessRules();
+            var bundleBusinessRules = new BusinessLogic.Service.BusinessRules.BundleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = bundleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -98,11 +98,11 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 },
-                new Promotion{ BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 },
+                new Promotion{ BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
-            var bundleBusinessRules = new BundleBusinessRules();
+            var bundleBusinessRules = new BusinessLogic.Service.BusinessRules.BundleBusinessRules();
 
             //Act
             var analizeOrderItemsDTOList = new List<AnalizeOrderItemsDTO>();

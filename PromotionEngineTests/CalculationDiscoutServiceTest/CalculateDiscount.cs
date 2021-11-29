@@ -11,7 +11,7 @@ using Xunit;
 
 namespace PromotionEngineTests.CalculationDiscoutServiceTest
 {
-    public class CalculateDiscountShould
+    public class CalculateDiscount
     {
         [Fact]
         public void Have432For20percentTwoBundlePromotions()
@@ -30,8 +30,8 @@ namespace PromotionEngineTests.CalculationDiscoutServiceTest
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = DiscountType.Percentage, PercentageDiscount = 20 },
-                new Promotion{ BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = DiscountType.Percentage, PercentageDiscount = 20 }
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = Discount.Percentage, PercentageDiscount = 20 },
+                new Promotion{ BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = Discount.Percentage, PercentageDiscount = 20 }
             };
 
             var calculationBusinessLogic = new BundleBusinessRules();
@@ -68,8 +68,8 @@ namespace PromotionEngineTests.CalculationDiscoutServiceTest
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 120 },
-                new Promotion{ BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 100 }
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "A", "Nike" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 120 },
+                new Promotion{ BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "Adidas" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 100 }
             };
 
             var calculationBusinessLogic = new BundleBusinessRules();
@@ -107,8 +107,8 @@ namespace PromotionEngineTests.CalculationDiscoutServiceTest
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "Nike", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 250},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "Adidas", Quantity = 2 , DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 180}
+                new Promotion { BundleType = Bundle.Multiple, SKU = "Nike", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 250},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "Adidas", Quantity = 2 , DiscountType = Discount.FixedPrice, FixedPriceDiscount = 180}
             };
 
             var calculationBusinessLogic = new MultipleBusinessRules();
@@ -146,8 +146,8 @@ namespace PromotionEngineTests.CalculationDiscoutServiceTest
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "Nike", Quantity = 3, DiscountType = DiscountType.Percentage, PercentageDiscount = 10},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "Adidas", Quantity = 2 , DiscountType = DiscountType.Percentage, PercentageDiscount= 10}
+                new Promotion { BundleType = Bundle.Multiple, SKU = "Nike", Quantity = 3, DiscountType = Discount.Percentage, PercentageDiscount = 10},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "Adidas", Quantity = 2 , DiscountType = Discount.Percentage, PercentageDiscount= 10}
             };
 
             var calculationBusinessLogic = new MultipleBusinessRules();

@@ -8,7 +8,7 @@ using Xunit;
 
 namespace PromotionEngineTests.CalculationBusinessLogicTests
 {
-    public class MultipleBusinessRulesShould
+    public class MultipleBusinessRules
     {
         [Fact]
         public void NotHaveItemForProcessing()
@@ -21,9 +21,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 1, SKU = "C", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130 };
+            var promotion = new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130 };
 
-            var multipleBusinessRules = new MultipleBusinessRules();
+            var multipleBusinessRules = new BusinessLogic.Service.BusinessRules.MultipleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = multipleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -44,9 +44,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 2, SKU = "D", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130 };
+            var promotion = new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130 };
 
-            var multipleBusinessRules = new MultipleBusinessRules();
+            var multipleBusinessRules = new BusinessLogic.Service.BusinessRules.MultipleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = multipleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -67,9 +67,9 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                     new OrderItem { Quantity = 2, SKU = "D", Price = 20 }
                 };
 
-            var promotion = new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130 };
+            var promotion = new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130 };
 
-            var multipleBusinessRules = new MultipleBusinessRules();
+            var multipleBusinessRules = new BusinessLogic.Service.BusinessRules.MultipleBusinessRules();
 
             //Act
             var analizeOrderItemsDTO = multipleBusinessRules.ApplyBusinessRules(orderItems, promotion);
@@ -91,11 +91,11 @@ namespace PromotionEngineTests.CalculationBusinessLogicTests
                 };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 45}
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.FixedPrice, FixedPriceDiscount = 45}
             };
 
-            var multipleBusinessRules = new MultipleBusinessRules();
+            var multipleBusinessRules = new BusinessLogic.Service.BusinessRules.MultipleBusinessRules();
 
             //Act
 

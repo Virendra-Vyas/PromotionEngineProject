@@ -6,7 +6,7 @@ namespace BusinessLogic.DTO.BundleItemDTO
     {
         public int BundleCount { get; set; }
         public double PromotionDiscount { get; set; }
-        public DiscountType DiscountType { get; set; }
+        public Discount DiscountType { get; set; }
         public double Amount { get; set; }
     }
 }

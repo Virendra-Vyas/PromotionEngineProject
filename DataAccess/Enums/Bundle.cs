@@ -1,6 +1,6 @@
 ﻿namespace DataAccess.Enums
 {
-    public enum BundleType
+    public enum Bundle
     {
         Multiple,
         Bundle,

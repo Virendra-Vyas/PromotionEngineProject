@@ -25,9 +25,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 45},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.FixedPrice, FixedPriceDiscount = 45},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
 
@@ -61,9 +61,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 45},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.FixedPrice, FixedPriceDiscount = 45},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
             var calculatorTypeService = new CalculatorTypeService();
@@ -99,9 +99,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion>() {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 45},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.FixedPrice, FixedPriceDiscount = 45},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
 
@@ -137,9 +137,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.Percentage, PercentageDiscount = 20},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.Percentage, PercentageDiscount = 20},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
             var calculatorTypeService = new CalculatorTypeService();
@@ -172,9 +172,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.Percentage, PercentageDiscount = 20},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.Percentage, PercentageDiscount = 20},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
             var calculatorTypeService = new CalculatorTypeService();
@@ -246,9 +246,9 @@ namespace PromotionEngineTests.CalculationServiceTests
             };
 
             var promotions = new List<Promotion> {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "A", Quantity = 3, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 130},
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.Percentage, PercentageDiscount = 20},
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Multiple, SKU = "A", Quantity = 3, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 130},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.Percentage, PercentageDiscount = 20},
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "C", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
 
@@ -279,7 +279,7 @@ namespace PromotionEngineTests.CalculationServiceTests
 
             var promotions = new List<Promotion>
             {
-                new Promotion { BundleType = BundleType.Multiple, SKU = "B", Quantity = 2 , DiscountType = DiscountType.Percentage, PercentageDiscount = 20},
+                new Promotion { BundleType = Bundle.Multiple, SKU = "B", Quantity = 2 , DiscountType = Discount.Percentage, PercentageDiscount = 20},
             };
 
 
@@ -313,7 +313,7 @@ namespace PromotionEngineTests.CalculationServiceTests
 
             var promotions = new List<Promotion>
             {
-                new Promotion { BundleType = BundleType.Bundle, SKUs = new List<string> { "A", "D" }, DiscountType = DiscountType.FixedPrice, FixedPriceDiscount = 30 }
+                new Promotion { BundleType = Bundle.Bundle, SKUs = new List<string> { "A", "D" }, DiscountType = Discount.FixedPrice, FixedPriceDiscount = 30 }
             };
 
             var calculatorTypeService = new CalculatorTypeService();

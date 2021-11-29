@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace PromotionEngine
 {
-    public static class DatabaseSeed
+    public static class Seed
     {
         public static IHost RunSeeds(this IHost host)
         {
@@ -32,29 +32,29 @@ namespace PromotionEngine
                         {
                             Id = 1,
                             Title = "3 of A's for 130",
-                            BundleType = BundleType.Multiple,
+                            BundleType = Bundle.Multiple,
                             SKU = "A",
                             Quantity = 3,
-                            DiscountType = DiscountType.FixedPrice,
+                            DiscountType = Discount.FixedPrice,
                             FixedPriceDiscount = 130
                         },
                         new Promotion
                         {
                             Id = 2,
                             Title = "2 of B's for 48",
-                            BundleType = BundleType.Multiple,
+                            BundleType = Bundle.Multiple,
                             SKU = "B",
                             Quantity = 2,
-                            DiscountType = DiscountType.Percentage,
+                            DiscountType = Discount.Percentage,
                             PercentageDiscount = 20
                         },
                         new Promotion
                         {
                             Id = 3,
                             Title = "C & D for 30",
-                            BundleType = BundleType.Bundle,
+                            BundleType = Bundle.Bundle,
                             SKUs = new List<string> { "C", "D" },
-                            DiscountType = DiscountType.FixedPrice,
+                            DiscountType = Discount.FixedPrice,
                             FixedPriceDiscount = 30
                         });
 

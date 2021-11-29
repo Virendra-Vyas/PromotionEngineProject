@@ -14,7 +14,7 @@ namespace BusinessLogic.Service.DiscountTypes
             double priceBeforeDiscount = 0.0;
             double priceAfterDiscount = 0.0;
 
-            if (promotion.DiscountType == DiscountType.FixedPrice)
+            if (promotion.DiscountType == Discount.FixedPrice)
             {
                 priceBeforeDiscount = rulesDTO.ItemForProccessing.Sum(item => item.Price * item.Quantity);
                 priceAfterDiscount = promotion.FixedPriceDiscount * rulesDTO.BundleCount;

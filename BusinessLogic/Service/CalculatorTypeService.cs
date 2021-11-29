@@ -12,7 +12,7 @@ namespace BusinessLogic.Service
     {
         public CalculateBase GetCalculatorType(Promotion promotion)
         {
-            if (promotion.BundleType == DataAccess.Enums.BundleType.Bundle)
+            if (promotion.BundleType == DataAccess.Enums.Bundle.Bundle)
             {
                 return new PromotionCalculator(promotion, new BundleBusinessRules(), new BundleDiscount());
             }
